@@ -1,0 +1,20 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: evicted-cleaner
+  namespace: k8s-admin-jobs
+spec:
+  schedule: "*/30 * * * *"  # Runs every 30 minutes
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: sa_cleaner
+          containers:
+          - name: evicted-cleaner
+            image: busybox
+            command:
+              - /bin/sh
+              - -c
+              - 'kubectl get pods --all-namespaces --field-selector=status.phase=Failed | grep Evicted | awk '\''{print $2 " -n " $1}'\'' | xargs -I {} kubectl delete pod {}'
+          restartPolicy: OnFailure
