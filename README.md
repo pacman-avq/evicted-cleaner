@@ -8,15 +8,15 @@ git clone https://https://github.com/pacman-avq/evicted-cleaner.git
 ```
 
 ```bash
-kubectl apply -f namespace.yaml
+kubectl apply -f evicted-cleaner/namespace.yaml
 ```
 
 ```bash
-kubectl apply -f service-account.yaml
+kubectl apply -f evicted-cleaner/service-account.yaml
 ```
 and after apply the cronjob manifest
 ```bash
-kubectl apply -f cronjob.yaml
+kubectl apply -f evicted-cleaner/cronjob.yaml
 ```
 The result is (I've set the job every 2 minutes in this example):
 
