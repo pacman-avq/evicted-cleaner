@@ -11,3 +11,17 @@ and after apply the cronjob manifest
 kubectl apply -f cronjob.yaml
 ```
 
+```bash
+NAME              SCHEDULE      TIMEZONE   SUSPEND   ACTIVE   LAST SCHEDULE   AGE
+evicted-cleaner   */2 * * * *   <none>     False     0        27s             18m
+NAME                       STATUS     COMPLETIONS   DURATION   AGE
+evicted-cleaner-28968422   Complete   1/1           4s         4m27s
+evicted-cleaner-28968424   Complete   1/1           4s         2m27s
+evicted-cleaner-28968426   Complete   1/1           3s         27s
+NAME                             READY   STATUS      RESTARTS   AGE
+evicted-cleaner-28968422-v8xjc   0/1     Completed   0          4m27s
+evicted-cleaner-28968424-dcltn   0/1     Completed   0          2m27s
+evicted-cleaner-28968426-6dthj   0/1     Completed   0          27s
+```
+
+
