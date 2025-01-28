@@ -10,7 +10,7 @@ and after apply the cronjob manifest
 ```bash
 kubectl apply -f cronjob.yaml
 ```
-The result is (I've set the job evry 2 minutes in this example):
+The result is (`I've set the job every 2 minutes in this example):
 
 ```bash
 NAME              SCHEDULE      TIMEZONE   SUSPEND   ACTIVE   LAST SCHEDULE   AGE
