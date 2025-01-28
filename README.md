@@ -4,7 +4,7 @@ This setup will create a CronJob named evicted-cleaner in the k8s-admin-jobs nam
 
 ## How to install:
 ```bash
-git clone https://
+git clone https://https://github.com/pacman-avq/evicted-cleaner.git
 ```
 
 ```bash
