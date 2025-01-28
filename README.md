@@ -14,7 +14,6 @@ kubectl apply -f evicted-cleaner/namespace.yaml
 ```bash
 kubectl apply -f evicted-cleaner/service-account.yaml
 ```
-and after apply the cronjob manifest
 ```bash
 kubectl apply -f evicted-cleaner/cronjob.yaml
 ```
